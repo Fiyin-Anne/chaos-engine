@@ -1,0 +1,35 @@
+{
+  "name": "chaos-engine",
+  "version": "1.0.0",
+  "description": "A package for running destructive tests on functions.",
+  "main": "chaos.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fiyin-Anne/chaos-engine.git"
+  },
+  "keywords": [
+    "test",
+    "chaos-monkey",
+    "chaos-engine"
+  ],
+  "author": "Fiyinfoluwa Akinsiku",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fiyin-Anne/chaos-engine/issues"
+  },
+  "homepage": "https://github.com/Fiyin-Anne/chaos-engine#readme",
+  "dependencies": {
+    "util": "^0.12.3"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  }
+}
