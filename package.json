@@ -16,6 +16,7 @@
   },
   "keywords": [
     "test",
+    "destructive tests",
     "chaos-monkey",
     "chaos-engine"
   ],
