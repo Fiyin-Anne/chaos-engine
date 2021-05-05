@@ -9,6 +9,12 @@ This package is a testing tool that allows the user to run a wide range of negat
 
 To get started, install from npm: `npm install chaos-engine`.
 
+## Table of content
+- [Overview](https://github.com/Fiyin-Anne/chaos-engine#overview)
+- [Table of content](https://github.com/Fiyin-Anne/chaos-engine#table-of-content)
+- [Basic usage](https://github.com/Fiyin-Anne/chaos-engine#basic-usage)
+- [Description](https://github.com/Fiyin-Anne/chaos-engine#description)
+
 ## Basic Usage
 
 Say we have a sample function named `func1`. This function accepts three parameters, and each of them should be a number. It then adds them up and returns a number value. Now, let's try to break it.
