@@ -11,7 +11,7 @@ To get started, install from npm: `npm install chaos-engine`.
 
 ## Table of content
 - [Overview](https://github.com/Fiyin-Anne/chaos-engine#overview)
-- [Table of content](https://github.com/Fiyin-Anne/chaos-engine#table-of-content)
+- [Table of content](https://github.com/Fiyin-Anne/chaos-engine#table-of-contents)
 - [Basic usage](https://github.com/Fiyin-Anne/chaos-engine#basic-usage)
 - [Description](https://github.com/Fiyin-Anne/chaos-engine#description)
 
@@ -174,6 +174,7 @@ _P.S: Output results have been shortened here for easy reading._
 
 Comparing the two outputs, we can see from the different responses that although the functions do the same thing, only one looks out for errors and handles them.
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Description
 There are three main properties involved in generating of a chaos report: `.describe()`, `.supply()`, and  `.destroy()`.
@@ -415,3 +416,5 @@ An `ArgumentError` is thrown if:
 - limit is higher than length of the array.
 
 This package currently only provides 30 predefined values to test with. If you choose not to supply your array, the `limit` cannot be higher than 30.
+
+**[⬆ back to top](#table-of-contents)**
