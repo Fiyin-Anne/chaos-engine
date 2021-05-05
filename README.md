@@ -22,6 +22,8 @@ Say we have a sample function named `func1`. This function accepts three paramet
 ```js
 var chaosEngine = require("chaos-engine");
 
+const { describe, createChaos } = chaosEngine;
+
 var func1 = function add(a, b, c) {
     if (typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'number' ) throw new Error('params should be a number');
     return a+b+c;
@@ -29,7 +31,7 @@ var func1 = function add(a, b, c) {
 
 //describe your function
 let description;
-description = chaosEngine.describe
+description = describe
                 .title('adds three numbers.')
                 .accepts(3)
                 .types('number')
@@ -37,7 +39,7 @@ description = chaosEngine.describe
                 .getDescription();
 
 // run destructive tests on the function
-let chaos_result = chaosEngine.destroy(func1, description);
+let chaos_result = createChaos.destroy(func1, description);
 console.log(chaos_result);
 
 /* Output:
@@ -105,13 +107,15 @@ Let's test another function `func2` that has not implemented any validation or e
 ```js
 var chaosEngine = require("chaos-engine");
 
+const { describe, createChaos } = chaosEngine;
+
 var func2 = function add(a, b, c) {
     return a+b+c;
 }
 
 //describe your function
 let description;
-description = chaosEngine.describe
+description = describe
                 .title('another function for adding.')
                 .accepts(3)
                 .types(['number'])
@@ -119,7 +123,7 @@ description = chaosEngine.describe
                 .getDescription();
 
 // run destructive tests on the function
-let chaos_result = chaosEngine.destroy(func2, description);
+let chaos_result = createChaos.destroy(func2, description);
 console.log(chaos_result);
 
 /*Output:
@@ -195,7 +199,7 @@ This property allows you to describe what your function does. It has five chaina
 Example:
 ```js
 let description;
-description = chaosEngine.describe
+description = describe
                 .title('adds numbers.')
                 .accepts(3)
                 .types('number')
@@ -213,6 +217,8 @@ console.log(description);
 ```
 
 _The chaining should always follow the format used in the example._
+
+The value(s) passed into `.types()` can only either be `'string', 'number', 'undefined', 'null', 'boolean', 'symbol', or 'bigint'`.
 
 If the chain contains any other method not in the table above, it returns an `InvalidMethod` error. It also throws a `TypeError` message if an invalid datatype is passed into any of the methods.
 
@@ -233,7 +239,7 @@ Example:
 var arr =   [1, 5, 8, [9, 8], "kl", {1: 'v', 2: 'b'}, 'must', 'contain', 'ten', 'values'];
 
 
-let chaos_result = ChaosEngine.supply(arr);
+let chaos_result = createChaos.supply(arr);
 console.log(chaos_result);
 
 /*Output:
@@ -328,14 +334,14 @@ var arr =   [1, 5, 8, [9, 8], "kl", {1: 'v', 2: 'b'}, 'must', 'contain', 'ten', 
 console.log(arr.length) //to show how `limit` works
 
 let description;
-description = chaosEngine.describe
+description = describe
               .title("luhn checker")
               .accepts(3)
               .types('array')
               .returns('number')
               .getDescription();
 
-let chaos_result = creatChaos.supply(arr).destroy(func1, description, 10)
+let chaos_result = createChaos.supply(arr).destroy(func1, description, 10)
 console.log(chaos_result);
 
 /*Output:
