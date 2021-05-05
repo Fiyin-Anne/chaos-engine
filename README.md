@@ -174,7 +174,7 @@ _P.S: Output results have been shortened here for easy reading._
 
 Comparing the two outputs, we can see from the different responses that although the functions do the same thing, only one looks out for errors and handles them.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](https://github.com/Fiyin-Anne/chaos-engine#table-of-contents)**
 
 ## Description
 There are three main properties involved in generating of a chaos report: `.describe()`, `.supply()`, and  `.destroy()`.
@@ -417,4 +417,4 @@ An `ArgumentError` is thrown if:
 
 This package currently only provides 30 predefined values to test with. If you choose not to supply your array, the `limit` cannot be higher than 30.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](https://github.com/Fiyin-Anne/chaos-engine#table-of-contents)**
