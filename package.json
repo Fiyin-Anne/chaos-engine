@@ -20,6 +20,9 @@
     "chaos-monkey",
     "chaos-engine"
   ],
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
   "author": "Fiyinfoluwa Akinsiku",
   "license": "ISC",
   "bugs": {
