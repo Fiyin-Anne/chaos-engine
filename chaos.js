@@ -1,11 +1,11 @@
-const { creatChaos }   = require('./lib/chaosengine');
+const { createChaos }   = require('./lib/chaosengine');
 var { details }    = require('./lib/describe');
 
-const { destroy, supply  } = creatChaos;
 var chaosEngine = {};
 
-chaosEngine.destroy = destroy;
-chaosEngine.supply = supply;
+chaosEngine.createChaos = createChaos;
 chaosEngine.describe = details;
 
 module.exports = chaosEngine;
+
+console.log(chaosEngine)

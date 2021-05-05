@@ -328,7 +328,7 @@ var arr =   [1, 5, 8, [9, 8], "kl", {1: 'v', 2: 'b'}, 'must', 'contain', 'ten', 
 console.log(arr.length) //to show how `limit` works
 
 let description;
-description =details
+description = chaosEngine.describe
               .title("luhn checker")
               .accepts(3)
               .types('array')
